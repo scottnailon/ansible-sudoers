@@ -10,7 +10,7 @@ First, on your ansible control server/machine:
  - Add the following line:
  	- <USERNAME> ALL=(ALL) NOPASSWD:ALL
 
-Use the playbook specified 
+Use the playbook here: https://github.com/scottnailon/ansible-sudoers/blob/main/sudoers.yml 
 
 Execute it:
 
