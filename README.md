@@ -10,23 +10,7 @@ First, on your ansible control server/machine:
  - Add the following line:
  	- <USERNAME> ALL=(ALL) NOPASSWD:ALL
 
-Your Playbook:
-- Create sudoers.yml
-
-  - hosts: "*"
-    remote_user: <USERNAME> 
-    become: yes
-    become_method: sudo
-    connection: ssh
-    gather_facts: yes
-    tasks:
-      - name: copy sudoers
-        copy:
-         src: "{{ item.src }}"
-         dest: "{{ item.dest }}"
-         mode: "{{ item.mode }}"
-        with_items:
-         - { src: '/etc/sudoers.d/90-user-sudoers' ,dest: '/etc/sudoers.d/90-user-sudoers' ,mode: '0755'}
+Use the playbook specified 
 
 Execute it:
 
